@@ -11,7 +11,12 @@ import {
 } from '@chakra-ui/react';
 import '../../styles/output.css';
 
-const TopToolbar = ({ setShowHistory, showHistory, value, setQuery }) => {
+const TopToolbar = ({
+  setshowSavedQueries,
+  showSavedQueries,
+  value,
+  setQuery,
+}) => {
   const onSubmit = () => {
     var Z = value.toLowerCase().slice(value.indexOf('from') + 'from'.length);
     setQuery(Z.split(' ')[1]);
@@ -35,9 +40,9 @@ const TopToolbar = ({ setShowHistory, showHistory, value, setQuery }) => {
             <text className="text-white">Saved Queries</text>
 
             <Switch
-              defaultChecked={true}
+              isChecked={showSavedQueries}
               id="history-switch"
-              onChange={e => setShowHistory(!showHistory)}
+              onChange={e => setshowSavedQueries(!showSavedQueries)}
               ml={'2'}
               mt={'1'}
             />
