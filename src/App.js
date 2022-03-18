@@ -39,6 +39,7 @@ function App() {
           showSavedQueries={showSavedQueries}
           setQuery={setQuery}
           value={value}
+          isTabletOrMobile={isTabletOrMobile}
         />
       </Suspense>
 

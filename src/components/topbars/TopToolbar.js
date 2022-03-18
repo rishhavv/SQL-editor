@@ -16,6 +16,7 @@ const TopToolbar = ({
   showSavedQueries,
   value,
   setQuery,
+  isTabletOrMobile,
 }) => {
   const onSubmit = () => {
     var Z = value.toLowerCase().slice(value.indexOf('from') + 'from'.length);
@@ -25,7 +26,7 @@ const TopToolbar = ({
     <Box className="bg-primary-dark" px={4}>
       <Flex h={12} justifyContent={'space-between'}>
         <Flex>
-          <Center w="100px" mr={'5px'}>
+       {!isTabletOrMobile && <> <Center w="100px" mr={'5px'}>
             <Text className="text-white" size="sm">
               Database:
             </Text>
@@ -35,7 +36,7 @@ const TopToolbar = ({
             <option value="local" selected={true}>
               Local
             </option>
-          </Select>
+          </Select></> }
           <Flex shrink={'0'} ml={'5'} mt={'2'}>
             <text className="text-white">Saved Queries</text>
 
@@ -55,7 +56,7 @@ const TopToolbar = ({
             mt={'1'}
             className="text-primary-dark"
           >
-            RUN Query
+            {isTabletOrMobile ? 'RUN' : ' RUN Query'}
           </Button>
         </Tooltip>
       </Flex>

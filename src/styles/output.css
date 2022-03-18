@@ -467,6 +467,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mr-3 {
   margin-right: 0.75rem;
 }
+.block {
+  display: block;
+}
 .inline {
   display: inline;
 }
