@@ -183,17 +183,15 @@ const Table = ({ columns, data, completeData, query }) => {
       <div className="py-1 flex items-center justify-between bg-primary-dark  ">
         <div className="flex-1 flex justify-between sm:hidden">
           <Button
-            handleClick={() => previousPage()}
+            onClick={() => previousPage()}
             disabled={!canPreviousPage}
-            size={'sm'}
-            classname="bg-primary-dark"
+            className="text-primary-dark"
           >
             Previous
           </Button>
           <Button
             className="text-primary-dark"
-            size={'sm'}
-            handleClick={() => nextPage()}
+            onClick={() => nextPage()}
             disabled={!canNextPage}
           >
             Next
@@ -221,15 +219,14 @@ const Table = ({ columns, data, completeData, query }) => {
           </div>
           <div>
             <nav
-              className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
+              className="relative z-0 inline-flex rounded-md shadow-sm "
               aria-label="Pagination"
             >
               <Button
                 size={'sm'}
-                className="rounded-l-md text-primary-dark"
+                className="rounded-l-md text-primary-dark mr-2"
                 onClick={() => gotoPage(0)}
                 disabled={!canPreviousPage}
-                mr={1}
               >
                 <span className="sr-only">First</span>
                 <svg
@@ -250,8 +247,7 @@ const Table = ({ columns, data, completeData, query }) => {
                 size={'sm'}
                 onClick={() => previousPage()}
                 disabled={!canPreviousPage}
-                className="text-primary-dark mr-2"
-                mx={'1'}
+                className="text-primary-dark mr-3"
               >
                 <span className="sr-only">Previous</span>
                 <svg
@@ -269,10 +265,10 @@ const Table = ({ columns, data, completeData, query }) => {
                 </svg>
               </Button>
               <Button
-                className=" text-primary-dark mx-2"
+                size={'sm'}
+                className=" text-primary-dark mr-2"
                 onClick={() => nextPage()}
                 disabled={!canNextPage}
-                mx={'1'}
               >
                 <span className="sr-only">Next</span>
                 <svg
@@ -290,10 +286,10 @@ const Table = ({ columns, data, completeData, query }) => {
                 </svg>
               </Button>
               <Button
-                className="rounded-l-md text-primary-dark mx-2"
+                size={'sm'}
+                className="rounded-l-md text-primary-dark mr-2"
                 onClick={() => gotoPage(pageCount - 1)}
                 disabled={!canNextPage}
-                mr={'1'}
               >
                 <span className="sr-only">Last</span>
                 <svg
