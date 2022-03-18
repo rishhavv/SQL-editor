@@ -31,6 +31,7 @@ const GlobalFilter = ({
       <label className="flex gap-x-2 items-baseline">
         <span className="text-white hidden md:inline-block ml-3">Search: </span>
         <input
+          aria-label="Search Table input box"
           type="text"
           className="text-black rounded-lg shadow-sm outline-none border-2 border-gray-300 focus:border-primary-dark transition w-40 md:w-52 "
           value={value || ''}

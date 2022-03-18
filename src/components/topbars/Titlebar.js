@@ -11,6 +11,7 @@ export default function Titlebar() {
             src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Atlan-logo-full.svg"
             loading="lazy"
             alt="Atlan"
+            aria-label="Atlan Logo"
             style={{ objectFit: 'contain', width: '100px' }}
           />
         </Box>

@@ -26,19 +26,24 @@ const TopToolbar = ({
     <Box className="bg-primary-dark" px={4}>
       <Flex h={12} justifyContent={'space-between'}>
         <Flex>
-       {!isTabletOrMobile && <> <Center w="100px" mr={'5px'}>
-            <Text className="text-white" size="sm">
-              Database:
-            </Text>
-          </Center>
-
-          <Select color={'white'} size={'sm'} mt={'2'}>
-            <option value="local" selected={true}>
-              Local
-            </option>
-          </Select></> }
+          {!isTabletOrMobile && (
+            <>
+              <Center w="100px" mr={'5px'}>
+                <Text className="text-white" size="sm">
+                  Database:
+                </Text>
+              </Center>
+              <Select color={'white'} size={'sm'} mt={'2'} id="DB">
+                <option value="local" selected={true}>
+                  Local
+                </option>
+              </Select>
+            </>
+          )}
           <Flex shrink={'0'} ml={'5'} mt={'2'}>
-            <text className="text-white">Saved Queries</text>
+            <text aria-label="Saved Queries" className="text-white">
+              Saved Queries
+            </text>
 
             <Switch
               isChecked={showSavedQueries}
@@ -46,6 +51,7 @@ const TopToolbar = ({
               onChange={e => setshowSavedQueries(!showSavedQueries)}
               ml={'2'}
               mt={'1'}
+              aria-label="saved queries"
             />
           </Flex>
         </Flex>
