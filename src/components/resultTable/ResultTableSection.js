@@ -5,7 +5,7 @@ import '../../styles/output.css';
 import LoadSpinner from '../subcomponents/LoadSpinner';
 import { Center } from '@chakra-ui/react';
 
-const ResultTableSection = React.memo(({ query }) => {
+const ResultTableSection = React.memo(({ query, isTabletOrMobile }) => {
   const { data, error } = useGetData(query);
 
   const columns = useMemo(() => {
@@ -41,11 +41,7 @@ const ResultTableSection = React.memo(({ query }) => {
     );
   return (
     <>
-      <section
-        className={`${
-          false ? 'col-start-2' : 'col-start-1'
-        } col-end-3 row-start-3 row-end-4 text-white overflow-hidden`}
-      >
+      <section className="col-start-1 col-end-3 row-start-3 row-end-4 text-white overflow-hidden">
         {data.length > 0 ? (
           <>
             <Table
@@ -53,6 +49,7 @@ const ResultTableSection = React.memo(({ query }) => {
               completeData={data}
               data={queryData}
               query={query}
+              isTabletOrMobile={isTabletOrMobile}
             />
           </>
         ) : (

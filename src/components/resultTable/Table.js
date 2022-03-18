@@ -45,7 +45,7 @@ const GlobalFilter = ({
   );
 };
 
-const Table = ({ columns, data, completeData, query }) => {
+const Table = ({ columns, data, completeData, query, isTabletOrMobile }) => {
   const {
     getTableProps,
     getTableBodyProps,
@@ -74,13 +74,16 @@ const Table = ({ columns, data, completeData, query }) => {
   );
   return (
     <>
-      <div className="flex justify-between items-center bg-primary-dark p-2">
+      <div
+        className={`flex justify-between items-center bg-primary-dark ${!isTabletOrMobile &&
+          'p-2'}`}
+      >
         <GlobalFilter
           preGlobalFilteredRows={preGlobalFilteredRows}
           globalFilter={state.globalFilter}
           setGlobalFilter={setGlobalFilter}
         />
-        <div>
+        <div className="flex">
           <CsvDownload
             className="bg-primary-light transition-colors text-primary-dark rounded-md font-semibold px-2 py-1 mr-3 shadow-lg"
             data={completeData}
@@ -103,10 +106,10 @@ const Table = ({ columns, data, completeData, query }) => {
             </svg>{' '}
             CSV
           </CsvDownload>
-          <Button
+          <div
             onClick={() => exportToJson(completeData, query)}
-            size={'sm'}
-            className="text-primary-dark"
+            size={'sm '}
+            className="bg-primary-light cursor-pointer transition-colors text-primary-dark rounded-md font-semibold px-2 py-1 mr-3 shadow-lg"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +127,7 @@ const Table = ({ columns, data, completeData, query }) => {
               />
             </svg>
             JSON
-          </Button>
+          </div>
         </div>
       </div>
 

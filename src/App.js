@@ -57,7 +57,7 @@ function App() {
                 <History setQuery={setQuery} setValue={setValue} />
               </Box>
             )}
-            <Box flex={1} borderWidth="0.5px" mx={4}>
+            <Box flex={1} borderWidth="0.5px" mx={isTabletOrMobile ? '0' : '4'}>
               <Editor setQuery={setQuery} value={value} setValue={setValue} />
             </Box>
           </Box>
@@ -70,7 +70,7 @@ function App() {
           </Center>
         }
       >
-        <div>{query ? <ResultTableSection query={query} /> : null}</div>
+        <div>{query ? <ResultTableSection query={query} isTabletOrMobile={isTabletOrMobile}/> : null}</div>
       </Suspense>
     </ChakraProvider>
   );
