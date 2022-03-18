@@ -1,4 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SQL Editor based on React.js
+
+This is a one page application based on React.js built with Tailwindcss and Chakra-UI.
+
+![Landing Page](src/assets/PageScreenshot/fullScreenShot.jpg)
+
+## Website is LIVE
+
+Follow link : [SQL-Editor](https://sql-editor-sigma.vercel.app/)
+
+## Tech used
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+Chakra UI ![TailwindCSS](https://raw.githubusercontent.com/chakra-ui/chakra-ui-docs/main/public/favicon.png)
+
+## 💥Features
+
+✨ Users can run pre-defined queries fetched using a custom hook from Github API\
+✨ U Can run Queries using keyboard shortcut `ALT+R`\
+✨ U: Records can be searched using search bar\
+✨ U: Mobile Friendly\
+✨ U Download Data in CSV as well as JSON format\
+✨ U Users can see query runtime in milliseconds(ms).
+
+## 💿 Saved Queries
+
+- `select * from customers`
+- `select * from categories`
+- `select * from employee_territories`
+- `select * from order_details`
+- `select * from orders`
+- `select * from products`
+- `select * from regions`
+- `select * from shippers`
+- `select * from suppliers`
+- `select * from territories`
+
+## ⏱ Page Load Time
+
+Page load time is less than 0.5 seconds on Desktop
+
+Test Results from Chrome-Lighthouse🔦🏠 and BrowserStack
+
+### [Lighthouse Chrome DevTools Report](https://developers.google.com/web/tools/lighthouse#devtools)
+
+![lighthouse report](src/assets/Results/lighthouse.jpg)
+
+### [BrowserStack Report](https://www.browserstack.com/speedlab)
+
+![browserstack report 1](src/assets/Results/browserStack1.jpg)
+![browserstack report 2](src/assets/Results/browserStack2.jpg)
 
 ## Available Scripts
 
@@ -36,33 +87,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
