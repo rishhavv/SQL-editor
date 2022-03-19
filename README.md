@@ -17,13 +17,13 @@ Chakra UI ![TailwindCSS](https://raw.githubusercontent.com/chakra-ui/chakra-ui-d
 ## 💥Features
 
 ✨ Users can run pre-defined queries fetched using a custom hook from Github API\
-✨ U Can run Queries using keyboard shortcut `ALT+R`\
-✨ U: Records can be searched using search bar\
-✨ U: Mobile Friendly\
-✨ U Download Data in CSV as well as JSON format\
-✨ U Users can see query runtime in milliseconds(ms).
+✨ Can run Queries using keyboard shortcut `ALT+R`\
+✨ Records can be searched using search bar\
+✨ Download Data in CSV as well as JSON format\
+✨ Optimised view for when using on mobile devices using `react-responsive` library\
+✨ Option to view different number of result rows per page
 
-## 💿 Saved Queries
+## 💾 Saved Queries
 
 - `select * from customers`
 - `select * from categories`
@@ -50,6 +50,13 @@ Test Results from Chrome-Lighthouse🔦🏠 and BrowserStack
 
 ![browserstack report 1](src/assets/Results/browserStack1.jpg)
 ![browserstack report 2](src/assets/Results/browserStack2.jpg)
+
+## 🏃🏻‍♂️💨How I optimised the pageload time
+
+🔨 Used React lazy load and suspense functions to load heavy components later and added a light fallback object
+🔨 Made use of React's memoization to load table results
+🔨 Made use of lazy loading when fetching for images
+🔨 Fixed accessibility issues by tagging aria-labels on components
 
 ## Available Scripts
 
