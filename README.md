@@ -17,6 +17,7 @@ Chakra UI ![TailwindCSS](https://raw.githubusercontent.com/chakra-ui/chakra-ui-d
 ## 💥Features
 
 ✨ Users can run pre-defined queries fetched using a custom hook from Github API\
+✨ Users can save queries for later use from button as well as keyboard shortcut `alt+S`\
 ✨ Can run Queries using keyboard shortcut `ALT+R`\
 ✨ Records can be searched using search bar\
 ✨ Download Data in CSV as well as JSON format\

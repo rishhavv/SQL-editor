@@ -16,7 +16,6 @@ const Editor = ({ setQuery, value, setValue }) => {
           id="editor"
           aria-label="editor"
           mode="mysql"
-          theme="Limon"
           name="editor"
           fontSize={16}
           minLines={28}

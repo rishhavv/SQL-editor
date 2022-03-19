@@ -4,14 +4,14 @@ import {
   Center,
 } from '@chakra-ui/react';
 import '../../styles/output.css';
-import TABLE_NAMES from '../../static/tableNames';
 
-const History = ({ setValue, setQuery }) => {
+const History = ({ setValue, setQuery,savedQueries }) => {
 
   const handleQuery = queryName => {
     setQuery(queryName);
     setValue(`select * from ${queryName}`);
   };
+
 
   const convertToNormalString = str => {
     var i,
@@ -29,7 +29,7 @@ const History = ({ setValue, setQuery }) => {
       </Center>
 
       <Box className="overflow-auto" maxHeight={'300'}>
-        {TABLE_NAMES.map(name => {
+        {savedQueries.map(name => {
           const finalName = convertToNormalString(name);
           return (
             <button

@@ -10,6 +10,7 @@ import {
   Tooltip,
 } from '@chakra-ui/react';
 import '../../styles/output.css';
+import toast from 'react-hot-toast';
 
 const TopToolbar = ({
   setshowSavedQueries,
@@ -17,11 +18,23 @@ const TopToolbar = ({
   value,
   setQuery,
   isTabletOrMobile,
+  setSavedQueries,
+  savedQueries,
 }) => {
   const onSubmit = () => {
     var Z = value.toLowerCase().slice(value.indexOf('from') + 'from'.length);
     setQuery(Z.split(' ')[1]);
   };
+  const onSave = () => {
+    var Z = value.toLowerCase().slice(value.indexOf('from') + 'from'.length);
+    if (savedQueries.includes(Z.split(' ')[1]) === false) {
+      setSavedQueries([...savedQueries, Z.split(' ')[1]]);
+      toast.success(`${Z.split(' ')[1].toUpperCase()} query saved!`);
+    } else {
+      toast.error('Query Already saved');
+    }
+  };
+
   return (
     <Box className="bg-primary-dark" px={4}>
       <Flex h={12} justifyContent={'space-between'}>
@@ -41,9 +54,9 @@ const TopToolbar = ({
             </>
           )}
           <Flex shrink={'0'} ml={'5'} mt={'2'}>
-            <text aria-label="Saved Queries" className="text-white">
+            <div aria-label="Saved Queries" className="text-white">
               Saved Queries
-            </text>
+            </div>
 
             <Switch
               isChecked={showSavedQueries}
@@ -55,16 +68,28 @@ const TopToolbar = ({
             />
           </Flex>
         </Flex>
-        <Tooltip label="ALT+R">
+        <div>
           <Button
-            mr="4"
-            onClick={() => onSubmit()}
+            size={isTabletOrMobile ? 'sm' : 'md'}
+            mr={isTabletOrMobile ? '1.5' : '4'}
+            onClick={() => onSave()}
             mt={'1'}
             className="text-primary-dark"
           >
-            {isTabletOrMobile ? 'RUN' : ' RUN Query'}
+            {isTabletOrMobile ? 'SAVE' : 'SAVE Query'}
           </Button>
-        </Tooltip>
+          <Tooltip label="ALT+R">
+            <Button
+              size={isTabletOrMobile ? 'sm' : 'md'}
+              mr={!isTabletOrMobile && '4'}
+              onClick={() => onSubmit()}
+              mt={'1'}
+              className="text-primary-dark"
+            >
+              {isTabletOrMobile ? 'RUN' : ' RUN Query'}
+            </Button>
+          </Tooltip>
+        </div>
       </Flex>
     </Box>
   );
