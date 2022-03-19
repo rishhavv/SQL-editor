@@ -56,7 +56,7 @@ Test Results from Chrome-Lighthouse🔦🏠 and BrowserStack
 🔨 Used React lazy load and suspense functions to load heavy components later and added a light fallback object\
 🔨 Made use of React's memoization to load table results\
 🔨 Made use of lazy loading when fetching for images\
-🔨 Fixed accessibility issues by tagging aria-labels on components\
+🔨 Fixed accessibility issues by tagging aria-labels on components
 
 ## Available Scripts
 
