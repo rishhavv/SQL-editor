@@ -45,7 +45,7 @@ Test Results from Chrome-Lighthouse🔦🏠 and BrowserStack
 
 ### [Lighthouse Chrome DevTools Report](https://developers.google.com/web/tools/lighthouse#devtools)
 
-![lighthouse report](src/assets/Results/lighthouse.jpg)
+![lighthouse report](src/assets/Results/lighthouseResults.jpg)
 
 ### [BrowserStack Report](https://www.browserstack.com/speedlab)
 
