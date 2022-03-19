@@ -1,6 +1,6 @@
 # SQL Editor based on React.js
 
-This is a one page application built on React.js with Tailwindcss and Chakra-UI.
+This is a single page application built on React.js with Tailwindcss and Chakra-UI.
 
 ![Landing Page](src/assets/PageScreenshot/fullScreenShot.jpg)
 
