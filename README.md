@@ -4,7 +4,7 @@ This is a single page application built on React.js with Tailwindcss and Chakra-
 
 ![Landing Page](src/assets/PageScreenshot/screeshot.jpg)
 
-## Website is LIVE
+## Website is now LIVE
 
 Follow link : [SQL-Editor](https://sql-editor-sigma.vercel.app/)
 
