@@ -1,3 +1,5 @@
+//Saved Queries pane 
+
 import React from 'react';
 import {
   Box,
@@ -7,6 +9,7 @@ import '../../styles/output.css';
 
 const History = ({ setValue, setQuery,savedQueries }) => {
 
+  //Handle click on saved query pane
   const handleQuery = queryName => {
     setQuery(queryName);
     setValue(`select * from ${queryName}`);

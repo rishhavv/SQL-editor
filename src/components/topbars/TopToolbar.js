@@ -1,3 +1,5 @@
+//includes Select DB, show saved query switch & Run, save query button 
+
 import React from 'react';
 import {
   Box,
@@ -21,10 +23,14 @@ const TopToolbar = ({
   setSavedQueries,
   savedQueries,
 }) => {
+
+  //on run button click
   const onSubmit = () => {
     var Z = value.toLowerCase().slice(value.indexOf('from') + 'from'.length);
     setQuery(Z.split(' ')[1]);
   };
+
+  //on save button click
   const onSave = () => {
     var Z = value.toLowerCase().slice(value.indexOf('from') + 'from'.length);
     if (savedQueries.includes(Z.split(' ')[1]) === false) {

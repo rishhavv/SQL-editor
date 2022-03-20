@@ -1,3 +1,5 @@
+//Result table part of App, includes the everthing below the editor and Saved queries pane
+
 import React, { useMemo } from 'react';
 import useGetData from '../customhooks/useGetData';
 import Table from './Table';
@@ -7,7 +9,7 @@ import { Center } from '@chakra-ui/react';
 
 const ResultTableSection = React.memo(({ query, isTabletOrMobile }) => {
   const { data, error } = useGetData(query);
-
+//using memoisation to fetch results quicker
   const columns = useMemo(() => {
     if (data.length > 0) {
       return Object.keys(data[0]).map(key => {
@@ -25,6 +27,7 @@ const ResultTableSection = React.memo(({ query, isTabletOrMobile }) => {
 
   const queryData = useMemo(() => data.slice(1), [data]);
   if (error)
+  //if error occurs show:
     return (
       <section
         className={`${
@@ -42,6 +45,7 @@ const ResultTableSection = React.memo(({ query, isTabletOrMobile }) => {
   return (
     <>
       <section className="col-start-1 col-end-3 row-start-3 row-end-4 text-white overflow-hidden">
+        {/* When data length is not null return: */}
         {data.length > 0 ? (
           <>
             <Table

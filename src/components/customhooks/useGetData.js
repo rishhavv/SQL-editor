@@ -1,3 +1,5 @@
+//Custom hook to fetch data
+
 import { useEffect, useState } from 'react';
 import alasql from 'alasql';
 import toast from 'react-hot-toast';

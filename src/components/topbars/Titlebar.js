@@ -1,3 +1,5 @@
+//Title bar with Atlan logo fetched from wikimedia
+
 import React from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 import '../../styles/output.css';
