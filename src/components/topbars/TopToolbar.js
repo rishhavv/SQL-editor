@@ -1,4 +1,4 @@
-//includes Select DB, show saved query switch & Run, save query button 
+//includes Select DB, show saved query switch & Run, save query button
 
 import React from 'react';
 import {
@@ -23,7 +23,6 @@ const TopToolbar = ({
   setSavedQueries,
   savedQueries,
 }) => {
-
   //on run button click
   const onSubmit = () => {
     var Z = value.toLowerCase().slice(value.indexOf('from') + 'from'.length);
@@ -75,15 +74,18 @@ const TopToolbar = ({
           </Flex>
         </Flex>
         <div>
-          <Button
-            size={isTabletOrMobile ? 'sm' : 'md'}
-            mr={isTabletOrMobile ? '1.5' : '4'}
-            onClick={() => onSave()}
-            mt={'1'}
-            className="text-primary-dark"
-          >
-            {isTabletOrMobile ? 'SAVE' : 'SAVE Query'}
-          </Button>
+          <Tooltip label="ALT+S">
+            <Button
+              size={isTabletOrMobile ? 'sm' : 'md'}
+              mr={isTabletOrMobile ? '1.5' : '4'}
+              onClick={() => onSave()}
+              mt={'1'}
+              className="text-primary-dark"
+            >
+              {isTabletOrMobile ? 'SAVE' : 'SAVE Query'}
+            </Button>
+          </Tooltip>
+
           <Tooltip label="ALT+R">
             <Button
               size={isTabletOrMobile ? 'sm' : 'md'}
